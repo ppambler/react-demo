@@ -25,19 +25,21 @@
 <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.development.min.js"></script>
 <script>
  let number = 0
- let span = React.createElement('span',{className:'tag'},number)
- ReactDOM.render(span,document.querySelector("#app"))
+ render()
 
  let add = document.querySelector('#add')
  add.onclick = ()=>{
    number += 1 
-   let span = React.createElement('span',{className:'tag'},number)
-   ReactDOM.render(span,document.querySelector("#app"))
+   render()
  }
  let minus = document.querySelector('#minus')
  minus.onclick = ()=>{
    number -= 1 
-   let span = React.createElement('span',{className:'tag'},number)
+   render()
+ }
+
+ function render() {
+  let span = React.createElement('span',{className:'tag'},number)
    ReactDOM.render(span,document.querySelector("#app"))
  }
 </script>
