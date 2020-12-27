@@ -3,6 +3,7 @@
 <head>
     <title>React starter app</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    
     <style>
       .container {
         height: 500px;
@@ -17,25 +18,28 @@
 </head>
 <body>
 <div id="app" class="container">
-  <span id="result" class="tag is-light">0</span>
-  <button id="add" class="button is-primary"> + </button>
-  <button id="minus" class="button is-primary"> - </button>
 </div>
+<button id="add" class="button is-primary"> + </button>
+<button id="minus" class="button is-primary"> - </button>
+<script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.1/umd/react.development.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.development.min.js"></script>
 <script>
-  let result = document.querySelector('#result')
-  let add = document.querySelector('#add')
-  let minus = document.querySelector('#minus')
+ let number = 0
+ let span = React.createElement('span',{className:'tag'},number)
+ ReactDOM.render(span,document.querySelector("#app"))
 
-  add.addEventListener('click',()=>{
-    let number = parseInt(result.innerText,10)
-    number += 1
-    result.innerText = number
-  })
-  minus.addEventListener('click',()=>{
-    let number = parseInt(result.innerText,10)
-    number -= 1
-    result.innerText = number
-  })
+ let add = document.querySelector('#add')
+ add.onclick = ()=>{
+   number += 1 
+   let span = React.createElement('span',{className:'tag'},number)
+   ReactDOM.render(span,document.querySelector("#app"))
+ }
+ let minus = document.querySelector('#minus')
+ minus.onclick = ()=>{
+   number -= 1 
+   let span = React.createElement('span',{className:'tag'},number)
+   ReactDOM.render(span,document.querySelector("#app"))
+ }
 </script>
 <!-- <script src="./src/index.js"></script> -->
 </body>
