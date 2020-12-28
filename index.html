@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>React starter app</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"
+    />
+
     <style>
       .container {
         height: 500px;
@@ -11,37 +14,51 @@
         justify-content: center;
         align-items: center;
       }
-      button,span {
+      button,
+      span {
         margin-left: 15px;
       }
     </style>
-</head>
-<body>
-<div id="app" class="container">
-</div>
-<script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.1/umd/react.development.min.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.development.min.js"></script>
-<script>
- let number = 0
- let onClickButton = ()=>{
-   number += 1
-   render()
- }
- let onClickButton2 = ()=>{
-   number -= 1
-   render()
- }
+  </head>
+  <body>
+    <div id="app" class="container"></div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.1/umd/react.development.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.development.min.js"></script>
+    <script>
+      let number = 0;
+      let onClickButton = () => {
+        number += 1;
+        render();
+      };
+      let onClickButton2 = () => {
+        number -= 1;
+        render();
+      };
 
- render()
+      render();
 
- function render() {
-  let span = React.createElement('span',{className:'tag'},number)
-  let button = React.createElement('button',{onClick:onClickButton,className:'button is-primary'},'+')
-  let button2 = React.createElement('button',{onClick:onClickButton2,className:'button is-primary'},'-')
-  let div = React.createElement('div',{className:"parent"},span,button,button2)
-  ReactDOM.render(div,document.querySelector("#app"))
- }
-</script>
-<!-- <script src="./src/index.js"></script> -->
-</body>
+      function render() {
+        let h = React.createElement;
+        ReactDOM.render(
+          h(
+            "div",
+            { className: "parent" },
+            h("span", { className: "tag" }, number),
+            h(
+              "button",
+              { onClick: onClickButton, className: "button is-primary" },
+              "+"
+            ),
+            h(
+              "button",
+              { onClick: onClickButton2, className: "button is-primary" },
+              "-"
+            )
+          ),
+          document.querySelector("#app")
+        );
+      }
+    </script>
+    <!-- <script src="./src/index.js"></script> -->
+  </body>
 </html>
