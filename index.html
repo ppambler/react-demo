@@ -22,43 +22,9 @@
   </head>
   <body>
     <div id="app" class="container"></div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.1/umd/react.development.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.development.min.js"></script>
-    <script>
-      let number = 0;
-      let onClickButton = () => {
-        number += 1;
-        render();
-      };
-      let onClickButton2 = () => {
-        number -= 1;
-        render();
-      };
-
-      render();
-
-      function render() {
-        let h = React.createElement;
-        ReactDOM.render(
-          h(
-            "div",
-            { className: "parent" },
-            h("span", { className: "tag" }, number),
-            h(
-              "button",
-              { onClick: onClickButton, className: "button is-primary" },
-              "+"
-            ),
-            h(
-              "button",
-              { onClick: onClickButton2, className: "button is-primary" },
-              "-"
-            )
-          ),
-          document.querySelector("#app")
-        );
-      }
-    </script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.1/umd/react.development.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.development.min.js"></script> -->
     <!-- <script src="./src/index.js"></script> -->
+    <script src="./src/demo2/index.js"></script>
   </body>
 </html>
