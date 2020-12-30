@@ -82,14 +82,36 @@ class Box2 extends React.Component {
     };
   }
   add() {
-    this.setState({
-      number: this.state.number + 2,
+    this.setState((state)=>{
+      console.log(state)
+      return {number: state.number+1}
     });
+    for(let i = 1;i<10;i++) {
+      console.log(i)
+    }
+    this.setState((state)=>{
+      console.log(state)
+      return {number: state.number+1}
+    });
+    for(let j = 1;j<100;j++) {
+      console.log(j)
+    }
   }
   minus() {
+    console.log(this.state.number)
     this.setState({
-      number: this.state.number - 2,
+      number: this.state.number - 1,
     });
+    for(let i = 1;i<10;i++) {
+      console.log(i)
+    }
+    this.setState({
+      number: this.state.number - 1,
+    });
+    for(let j = 1;j<10;j++) {
+      console.log(j)
+    }
+    console.log(this.state.number)
   }
   render() {
     return (
