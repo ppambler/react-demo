@@ -1,0 +1,26 @@
+.header
+{
+    display: flex;
+    justify-content: center;
+}
+
+.track
+{
+    border-bottom: 1px solid black;
+}
+
+*
+{box-sizing: border-box;
+    margin: 0;padding: 0;
+}
+
+.playground
+{
+    border: 1px solid black;
+    background: green;
+}
+
+body
+{
+    padding: 40px;
+}
