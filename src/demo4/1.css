@@ -1,0 +1,22 @@
+.root
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    border: 1px solid black;
+}
+.papa
+{
+    padding: 10px;
+
+    border: 1px solid grey;
+}
+.son
+{
+    padding: 10px;
+
+    border: 1px solid grey;
+}
