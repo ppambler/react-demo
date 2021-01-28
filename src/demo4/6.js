@@ -33,6 +33,7 @@ let reducers = (state = 0, action) => {
 
 // 数据仓库
 const store = createStore(reducers);
+console.log(store)
 
 console.log(store.getState());
 
@@ -115,10 +116,8 @@ class Son2 extends React.Component {
     // action -> 事件，「我想花钱」就是「action type」
     // 「100」就是「payload」(载荷)
     // eventHub.trigger("我想花钱", 100);
-    store.dispatch({
-      type: "MINUS",
-      payload: 100,
-    });
+    this.props.money.amount -= 300
+    store.dispatch({ type: "MINUS", payload: 100, });
   }
   render() {
     return (

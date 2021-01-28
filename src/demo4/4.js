@@ -34,7 +34,7 @@ var 管家 = {
   },
 };
 
-管家.init(eventMap);
+管家.init();
 console.log();
 
 class App extends React.Component {
